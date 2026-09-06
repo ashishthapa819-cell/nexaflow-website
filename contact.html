@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Tell NexaFlow about a task your team would like to simplify using our enquiry form.">
+  <title>Contact | NexaFlow</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span aria-hidden="true">N</span> NexaFlow</a>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode</button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Menu</button>
+      </div>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page-heading">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Tell us what you're working on.</h1>
+        <p class="intro">You don't need a technical brief. A few details about the task you want to simplify will do.
+        </p>
+      </div>
+    </section>
+
+    <div class="section container contact-layout">
+      <section class="contact-notes" aria-labelledby="enquiry-heading">
+        <h2 id="enquiry-heading">Where should we start?</h2>
+        <p>It helps to know:</p>
+        <ul>
+          <li>Which task takes up your time</li>
+          <li>What apps or spreadsheets you use</li>
+          <li>What you'd like to work better</li>
+        </ul>
+        <p>Still exploring? <a href="services.html">Read about our services</a>.</p>
+        <p class="form-note" id="form-note">The form checks your entries, but it doesn't send or store your message.</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Your enquiry</h2>
+        <p id="form-hint">All three fields are required.</p>
+        <noscript>
+          <p>JavaScript is needed to check your enquiry. Nothing will be sent.</p>
+        </noscript>
+        <form id="contact-form" aria-describedby="form-hint form-note">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required
+              aria-describedby="name-error">
+            <p class="field-error" id="name-error"></p>
+          </div>
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required
+              aria-describedby="email-error">
+            <p class="field-error" id="email-error"></p>
+          </div>
+          <div class="form-field">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="5" maxlength="2000" required
+              aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error"></p>
+          </div>
+
+          <button class="button" type="submit" disabled>Check enquiry</button>
+          <p id="form-status" class="form-status" role="status" aria-atomic="true"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
