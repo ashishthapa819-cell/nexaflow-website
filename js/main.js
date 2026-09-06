@@ -1,10 +1,10 @@
-
+const themeStorageKey = 'nexaflow-theme';
 const themeButton = document.querySelector('.theme-toggle');
 const colourPreference = window.matchMedia('(prefers-color-scheme: dark)');
 let savedTheme = null;
 
 try {
-  savedTheme = localStorage.getItem('nexaflow-theme');
+  savedTheme = localStorage.getItem(themeStorageKey);
 } catch {
   savedTheme = null;
 }
@@ -25,7 +25,7 @@ if (themeButton) {
     setTheme(nextTheme);
     savedTheme = nextTheme;
     try {
-      localStorage.setItem('nexaflow-theme', nextTheme);
+      localStorage.setItem(themeStorageKey, nextTheme);
     } catch {
       // The theme still works if browser is not available
     }
