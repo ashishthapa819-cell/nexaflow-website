@@ -82,6 +82,9 @@ const faqButtons = document.querySelectorAll('.faq-question');
 faqButtons.forEach((button) => {
   const answer = document.getElementById(button.getAttribute('aria-controls'));
   const icon = button.querySelector('span');
+
+  if (!answer || !icon) return;
+
   answer.hidden = true;
   button.setAttribute('aria-expanded', 'false');
   icon.textContent = '+';
