@@ -27,7 +27,7 @@ if (themeButton) {
     try {
       localStorage.setItem('nexaflow-theme', nextTheme);
     } catch {
-      // The theme still works when browser storage is unavailable.
+      // The theme still works if browser is not available
     }
   });
 }
